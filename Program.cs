@@ -27,18 +27,87 @@
 
 // #2 if Statement
 
-Console.WriteLine("Please enter your age: ");
-int age = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Please enter your age: ");
+// int age = Convert.ToInt32(Console.ReadLine());
 
-if(age > 18) 
+// if(age > 18) 
+// {
+//     Console.WriteLine("You are signed up!");
+// }
+// else if(age < 0)
+// {
+//     Console.WriteLine("You haven't been born yeat");
+// }
+// else    
+// { 
+//     Console.WriteLine("You are " + age);
+// }
+
+
+// #3 Arrays
+// arrays are fixed size in C#
+
+// String[] cars = {"BMW", "Mustang", "Corvette"};
+// foreach (String carItem in cars) {
+//     Console.WriteLine(carItem); 
+// }
+using System.ComponentModel.Design;
+using System.Diagnostics.CodeAnalysis;
+
+namespace TestSheet
 {
-    Console.WriteLine("You are signed up!");
+    class Program {
+        static void Main(string[] args) {
+            // #4 methods
+            // String name = "Vakho";
+            // singHappyBirthday(name);
+
+
+            try {
+                Console.WriteLine(CheckOut(5,8,1,0,81,62,50));
+            } 
+            catch (FormatException e) {
+                Console.WriteLine(e.Message);
+            }
+            catch (DivideByZeroException e) {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+            finally {
+                Console.WriteLine("Finalized");
+            }
+
+
+        }  
+
+        static void singHappyBirthday(String name) {
+            Console.WriteLine("Happy birthday to you!");
+            Console.WriteLine("Happy birthday to you!");
+            Console.WriteLine($"Happy birthday dear {name}!");
+            Console.WriteLine("Happy birthday to you!");
+            Console.WriteLine();
+        }
+
+        // #5 return, method overload, params
+        static double multiply(double x, double y){
+            return x * y;
+        }
+        static double multiply(double x, double y, double z){
+            return x * y * z;
+        }
+        static double CheckOut(params double[] prices) {
+            double total = 0;
+
+            foreach(double price in prices) {
+                total += price;
+            }
+
+            return total;
+        }    
+    }
+
 }
-else if(age < 0)
-{
-    Console.WriteLine("You haven't been born yeat");
-}
-else    
-{ 
-    Console.WriteLine("You are " + age);
-}
+
+

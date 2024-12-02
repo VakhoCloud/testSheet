@@ -12,3 +12,4 @@ C:\C# Projects bro code\testSheet\obj\Debug\net8.0\refint\testSheet.dll
 C:\C# Projects bro code\testSheet\obj\Debug\net8.0\testSheet.pdb
 C:\C# Projects bro code\testSheet\obj\Debug\net8.0\testSheet.genruntimeconfig.cache
 C:\C# Projects bro code\testSheet\obj\Debug\net8.0\ref\testSheet.dll
+C:\C# Projects bro code\testSheet\obj\Debug\net8.0\testSheet.sourcelink.json
